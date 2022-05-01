@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Authors>Benjamin Regan</Authors>
+    <Product />
+    <Company></Company>
+    <Description>C# API Wrapper for the Minecraft server Hypixel.net (https://hypixel.net)</Description>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Bregann/Hypixel.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Bregann/Hypixel.NET</RepositoryUrl>
+    <PackageTags>Hypixel API Wrapper</PackageTags>
+    <PackageReleaseNotes>Added skyblock pets, slayer and API key checking</PackageReleaseNotes>
+    <Version>1.0.9</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BoosterApi\**" />
+    <Compile Remove="FriendsApi\**" />
+    <Compile Remove="GameCountApi\**" />
+    <Compile Remove="GuildApi\**" />
+    <Compile Remove="KeyApi\**" />
+    <Compile Remove="LeaderboardsApi\**" />
+    <Compile Remove="PlayerApi\**" />
+    <Compile Remove="SkyblockApi\**" />
+    <Compile Remove="WatchdogStatsApi\**" />
+    <EmbeddedResource Remove="BoosterApi\**" />
+    <EmbeddedResource Remove="FriendsApi\**" />
+    <EmbeddedResource Remove="GameCountApi\**" />
+    <EmbeddedResource Remove="GuildApi\**" />
+    <EmbeddedResource Remove="KeyApi\**" />
+    <EmbeddedResource Remove="LeaderboardsApi\**" />
+    <EmbeddedResource Remove="PlayerApi\**" />
+    <EmbeddedResource Remove="SkyblockApi\**" />
+    <EmbeddedResource Remove="WatchdogStatsApi\**" />
+    <None Remove="BoosterApi\**" />
+    <None Remove="FriendsApi\**" />
+    <None Remove="GameCountApi\**" />
+    <None Remove="GuildApi\**" />
+    <None Remove="KeyApi\**" />
+    <None Remove="LeaderboardsApi\**" />
+    <None Remove="PlayerApi\**" />
+    <None Remove="SkyblockApi\**" />
+    <None Remove="WatchdogStatsApi\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="HypixelApi.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="RestSharp" Version="106.6.10" />
+    <PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>
