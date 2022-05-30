@@ -120,6 +120,47 @@ header {
     transform: translateY(0%);
   }
 
+#search_box {
+  color: white;
+  text-align: center;
+  background-color: #282828;
+  text-decoration-color: white;
+  font-size: 2em;
+  border-radius: 9px;
+  padding: 20px;
+  align-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+}
+
+#txtUsername {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  resize: none;
+  border: 0 !important;
+  border-radius: 9px;
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  height: 36px;
+  width: 360px;
+  padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+
+
 #inp_search_user {
   position: absolute;
   top: 0;
@@ -245,6 +286,26 @@ header {
 
   #btn_search_user:hover {
     background-color: rgba(0,0,0,0.07);
+  }
+
+#submit_button {
+  display: inline-block;
+  align-content: center;
+  height: 36px;
+  width: 100px;
+  border-radius: 18px;
+  background-color: rgba(0,0,0,0.2);
+  margin-top: 16px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  color: white;
+  border: 2px solid black;
+  width: 110px;
+}
+
+  #submit_button:hover {
+    background-color: rgba(0,0,0,0.07);
+    
   }
 
 #ProfileDropDownlist {

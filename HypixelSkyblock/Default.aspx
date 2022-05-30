@@ -13,7 +13,7 @@
       <div id="site_name_div">
         <a href="/" id="site_name">Skyblock Minions</a>
       </div>
-      
+
       <div id="search_user">
         <asp:TextBox ID="inp_search_user" runat="server" OnClick="this.value=''">Enter Username</asp:TextBox>
         <asp:Button ID="btn_search_user" runat="server" Text="" OnClick="btnGetProfile_Click" />
@@ -31,7 +31,15 @@
           <asp:Label ID="lblCostToNextMinionSlot" runat="server" Text=""></asp:Label>
           <asp:Label ID="lblNumOfMinionsTilNextSlot" runat="server" Text=""></asp:Label>
         </div>
-        
+        <div id="search_box" runat="server">
+          <div>Enter Username:</div>
+          <span>
+            <asp:TextBox ID="txtUsername" placeholder="Enter Username" runat="server"></asp:TextBox>
+          </span>
+          <span>
+            <asp:Button ID="submit_button" runat="server" Text="Search User" OnClick="submit_button_Click" />
+          </span>
+        </div>
         <br />
         <asp:GridView ID="gvMinionTable" runat="server" CssClass="darkTable" AutoGenerateColumns="false">
           <Columns>

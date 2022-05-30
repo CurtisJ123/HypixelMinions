@@ -35,8 +35,17 @@ namespace HypixelSkyblock
 
     protected void btnGetProfile_Click(object sender, EventArgs e)
     {
-
-      strUserName = inp_search_user.Text;
+      GetProfile(inp_search_user.Text);
+    }
+    protected void submit_button_Click(object sender, EventArgs e)
+    {
+      GetProfile(txtUsername.Text);
+    }
+    public void GetProfile(string UserName)
+    {
+      search_box.Visible = false;
+      inp_search_user.Text = UserName;
+      strUserName = UserName;
       ProfileDropDownlist.Items.Clear();
 
 
@@ -48,15 +57,15 @@ namespace HypixelSkyblock
       ProfileDropDownlist.Visible = true;
 
       // Gets the cute_name of each skyblock profile and adds it to the drop down list
-      foreach (var profile in userData.Player.Stats.SkyBlock.Profiles)
+      foreach(var profile in userData.Player.Stats.SkyBlock.Profiles)
       {
         ListItem item = new ListItem(profile.Value.CuteName, profile.Value.ProfileId);
         ProfileDropDownlist.Items.Add(item);
       }
       //btnGetTable.Visible = true;
       getTableOfMinions();
-    }
 
+    }
     protected void btnUpdateDatabase_Click(object sender, EventArgs e)
     {
       //var hypixel = new HypixelApi("4670bbc3-ea19-45fe-be04-70c3c87c918f", 300);
@@ -309,5 +318,7 @@ namespace HypixelSkyblock
     {
       getTableOfMinions();
     }
-  }
+
+    
+    }
 }
